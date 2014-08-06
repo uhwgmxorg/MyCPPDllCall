@@ -20,3 +20,25 @@ namespace MyCPPDll
 	}
 }
 
+
+// Methods for using in managed code
+//
+// ClassICrate
+MyCPPDll::ClassI* ClassICrate()
+{
+	return new MyCPPDll::ClassI();
+}
+
+// ClassIGetVersion
+char* ClassIGetVersion(MyCPPDll::ClassI* pClassI)
+{
+	return pClassI->GetVersion();
+}
+
+// ClassIDelete
+void ClassIDelete(MyCPPDll::ClassI* pClassI)
+{
+	delete pClassI;
+}
+
+
